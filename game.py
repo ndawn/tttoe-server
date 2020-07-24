@@ -51,11 +51,6 @@ class Game:
 
         self.field[y][x] = self.players[player].shape
 
-        print('=' * 16)
-        for row in self.field:
-            print(row)
-        print('=' * 16)
-
         for _x in range(self.field_size):
             if self.field[y][_x] != self.players[player].shape:
                 break
