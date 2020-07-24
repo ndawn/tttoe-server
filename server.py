@@ -146,4 +146,11 @@ async def handle_ws_connection(request):
 
 app = web.Application()
 app.add_routes([web.get('/ws', handle_ws_connection)])
-web.run_app(app)
+
+
+async def prod_app():
+    return app
+
+
+if __name__ == '__main__':
+    web.run_app(app)
